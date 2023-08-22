@@ -12,10 +12,9 @@ const alunos = [
 ];
 
 function MediaDosAlunos() {
-  alunos.forEach(alunosItem => {
-    if (alunosItem.nota >= 6) {
-      console.log(alunosItem.nome);
-    }
+  const aprovados = alunos.filter(aluno => aluno.nota >= 6);
+  aprovados.forEach(alunoAprovado => {
+    console.log(alunoAprovado.nome);
   });
 }
 
